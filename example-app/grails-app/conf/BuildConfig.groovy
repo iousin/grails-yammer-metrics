@@ -7,7 +7,7 @@ grails.project.source.level = 1.6
 
 // Inline the metrics plugin for easy testing
 grails.plugin.location.'yammer-metrics' =  "../."
-yammermetrics.version = System.getProperty( "metrics.version", "3.0.1" )
+yammermetrics.version = System.getProperty( "metrics.version", "3.1.2" )
 
 grails.project.dependency.resolution = {
 
@@ -16,7 +16,8 @@ grails.project.dependency.resolution = {
         // specify dependency exclusions here; for example, uncomment this to disable ehcache:
         // excludes 'ehcache'
     }
-    log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
+
+    log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
     legacyResolve true // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
@@ -30,6 +31,7 @@ grails.project.dependency.resolution = {
         mavenLocal()
         mavenCentral()
 
+        grailsRepo "https://grails.org/plugins"
     }
 
     dependencies {
