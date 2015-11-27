@@ -1,3 +1,6 @@
+This fork upgrades to dropwizard metrics 3.1.2 and grails version to 2.2.4
+=======
+
 Grails Plugin for the Yammer Metrics Package
 =======
 

@@ -8,12 +8,12 @@ import java.util.concurrent.TimeUnit
 
 class HistogramTest extends GroovyTestCase {
 
-    def testNewHistogramWithDefaultReservoir() {
+    void testNewHistogramWithDefaultReservoir() {
         def histogram = Metrics.newHistogram("MyHistogram")
         assert histogram instanceof Histogram
     }
 
-    def testNewHistogramWithCustomReservoir() {
+    void testNewHistogramWithCustomReservoir() {
         Histogram histogram = Metrics.newHistogram("SlidingTimeWindowHistogram", new SlidingTimeWindowReservoir(100, TimeUnit.MILLISECONDS))
         assert histogram instanceof Histogram
 
